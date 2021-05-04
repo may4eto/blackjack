@@ -1,3 +1,9 @@
+$screen-sm-min: 576px;
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
 header {
   width: 80%;
   margin-left: auto;
@@ -22,5 +28,9 @@ h1 {
   font-family: 'Ewert', cursive;
   margin: 0;
   font-size: 5rem;
+  @include sm {
+    font-size: 3rem;
+  }
   text-align: center;
 }
+

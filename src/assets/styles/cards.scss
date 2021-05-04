@@ -1,7 +1,17 @@
+$screen-sm-min: 576px;
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
 .card::before {
   display: block;
   width: 8rem;
   margin-bottom: -40px;
+  @include sm {
+    margin-bottom: 0px;
+  }
   position: relative;
   font-size: 12em;
   line-height: 1em;

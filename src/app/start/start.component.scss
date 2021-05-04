@@ -1,3 +1,10 @@
+$screen-sm-min: 576px;
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
 .row {
   width: 70%;
   margin-left: auto;
@@ -19,6 +26,10 @@
   display: block;
   width: 53px;
   height: 53px;
+  @include sm {
+    width: 24px;
+    height: 24px;
+  }
   border: 2px solid #b6b6b6;
   border-radius: 4px;
   position: relative;
